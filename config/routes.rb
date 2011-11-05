@@ -1,6 +1,8 @@
 Coldcut::Application.routes.draw do
   resources :offers
   resources :users
+  resources :bids
+  
   # Authentication
   match '/auth/:provider/callback' => 'sessions#create'
   match '/auth/failure' => 'sessions#failure'
