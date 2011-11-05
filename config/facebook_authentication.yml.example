@@ -1,0 +1,3 @@
+# Facebook login credentials
+FACEBOOK_APP_ID: 'some id'
+FACEBOOK_APP_SECRET: 'some secret'
