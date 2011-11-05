@@ -1,13 +1,16 @@
 <div id="refine-search" class="clearfix">
   <%= form_tag root_url, :method => 'get' do %>
     <div class="location-filter pull-left">
-      <%= label_tag :location %>
+      <label for="location"><span>Location</span></label>
       <%= text_field_tag :location, params[:location] %>
     </div>
-    <div class="categories-filter pull-right">
-      <% Category.all.each do |category| %>
-        <%= check_box_tag "category_ids[]", category.id, (params[:category_ids] || []).include?(category.id.to_s)  %>
-      <% end %>
-    </div>
   <% end %>
+  <ul class="categories-filter pull-right">
+    <% Category.all.each do |category| %>
+      <li class="<%= category.name.downcase %>">
+        <label for="<%= category.name %>"><%= category.name %></label>
+        <%= check_box_tag category.name %>
+      </li>
+    <% end %>
+  </div>
 </div>

@@ -3,6 +3,12 @@ $bgcolor: #ffffff;
 
 $top_bar_height: 150px;
 
+@mixin hide_text {
+  text-indent: -9999px;
+  outline: none;
+  display: block;
+}
+
 html, body{
   background-color: $bgcolor;
 }
@@ -20,32 +26,27 @@ body{
     
     .title-container {
       .title {
-        display: block;
         width: 350px;
         height: 134px;
         background: transparent image_url('freesbee.jpg') no-repeat 0 0;
-        text-indent: -9999px;
-        outline: none;
+        
+        @include hide_text;
       } // .title
     } // .title-container
 
     .tagline {
-      display: block;
-      text-indent: -9999px;
-      outline: none;
+      @include hide_text;
     }
 
     .give a {
       position: absolute;
       right: 0;
       top: 0;
-      display: block;
       height: $top_bar_height;      
       width: 278px;
       
-      text-indent: -9999px;
-      outline: none;
-      background: transparent image_url('give.jpg') no-repeat 0 0;
+      @include hide_text;
+      background: transparent image_url('give.jpg') no-repeat 0 -1px;
     } // .give
   }
 } // .topbar
@@ -88,4 +89,93 @@ footer {
   bottom: 0;
   width: 100%;
   padding: 0;
+  
+  #refine-search {
+    height: 139px;
+    
+    .location-filter {
+      position: relative;
+      
+      label {
+        background: transparent image_url('location.png') no-repeat 0 0;
+        width: 160px;
+        height: 41px;
+      
+        span {
+          @include hide_text;
+          display: none;
+        }
+      }
+    
+      input {
+        clear: both;
+        position: absolute;
+        left: 15px;
+        top: 50px;
+        font-size: 40px;
+        line-height: 40px;
+        
+        height: 60px;
+        width: 350px;
+      }
+    } // .location-filter
+  }
+  
+  .categories-filter {
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    
+    li {
+      float: left;
+      list-style: none;
+      display: block;
+      height: 138px;
+      cursor: pointer;
+      
+      label, input {
+        @include hide_text;
+        display: none;
+      }
+      
+      &.fashion {
+        background: transparent image_url('fashion-inactive.png') no-repeat 0 0;
+        width: 215px;
+      }
+      &.leisure {
+        background: transparent image_url('leisure-inactive.png') no-repeat 0 0;
+        width: 122px;
+      }
+      &.electronics {
+        background: transparent image_url('electronics-inactive.png') no-repeat 0 0;
+        width: 122px;
+      }
+      &.houseware {
+        background: transparent image_url('houseware-inactive.png') no-repeat 0 0;
+        width: 180px;
+      }
+      &.misc {
+        background: transparent image_url('misc-inactive.png') no-repeat 0 0;
+        width: 128px;
+      }
+    }
+  } // .categories-filter
+  
+  #session-info {
+    background-color: black;
+    clear: both;
+    
+    ul {
+      list-style: none;
+    }
+    
+    .sign-in-button {
+      display: block;
+      width: 273px;
+      height: 63px;
+      background: transparent image_url('fb-connect.png') no-repeat 0 0;
+      
+      @include hide_text;
+    } // .sign-in-button
+  }
 } // footer

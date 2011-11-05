@@ -4,6 +4,10 @@ Give and receive, the principle of reciprocity :)
 
 ## Development
 
+To reset the database
+
+    bundle exec rake db:drop db:create db:migrate db:seed
+
 To run the server:
 
     bundle exec rails s -p 4000
