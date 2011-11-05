@@ -1,0 +1,5 @@
+environment: development
+pid: tmp/pids/thin.pid
+socket: tmp/sockets/thin.sock
+servers: 2
+daemonize: true
