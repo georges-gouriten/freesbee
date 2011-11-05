@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Cold cut</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Freesbees, the market place for free stuff</title>
+    <meta name="description" content="Freesbees, the market place for free stuff">
+    <meta name="author" content="Freesbee Team">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -28,6 +28,10 @@
     <div id="wrapper">
       <%= yield %>
     </div>
-    <%= render :partial => "layouts/footer" %>
+    <footer>
+      <%= render :partial => "partials/refine" %>
+      <%= render :partial => "layouts/footer" %>
+    </footer>
+    
   </body>
 </html>

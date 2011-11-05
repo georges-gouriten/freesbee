@@ -1,0 +1,13 @@
+<div id="refine-search" class="clearfix">
+  <%= form_tag root_url, :method => 'get' do %>
+    <div class="location-filter pull-left">
+      <%= label_tag :location %>
+      <%= text_field_tag :location %>
+    </div>
+    <div class="categories-filter pull-right">
+      <% Category.all.each do |category| %>
+        <%= check_box_tag "category_ids[]", category.id %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -1,34 +1,46 @@
-<%= form_for @offer, :html => { :multipart => true } do |o| %>
-<!-- Stuff here is ordered by order of importance. Title and Photo most important ;-) -->
-  <div class="modal-body">
-    <div class="field clearfix">
-      <%= o.label :title %>
-      <div class="input">
-        <%= o.text_field :title, :class => 'span5' %>
-      </div>
+<% if user_signed_in? %>
+  <%= form_for @offer, :html => { :multipart => true } do |o| %>
+    <%= o.hidden_field :user_id, :value => current_user.id %>
+    <!-- Stuff here is ordered by order of importance. Title and Photo most important ;-) -->
+    <div class="modal-body">
+      
+      <div class="field clearfix">
+        <%= o.label :title %>
+        <div class="input">
+          <%= o.text_field :title, :class => 'span5' %>
+        </div>
 
-    </div>
-    <div class="field clearfix file">
-      <%= o.label :photo %>
-      <div class="input">
-        <%= o.file_field :photo %>
+      </div>
+      <div class="field clearfix file">
+        <%= o.label :photo %>
+        <div class="input">
+          <%= o.file_field :photo %>
+        </div>
+      </div>
+      <div class="clearfix">
+        <%= o.label :pickup_point %>
+        <div class="input">
+          <%= o.text_field :pickup_point, :class => 'span5' %>
+        </div>
+      </div>
+      <div class="clearfix">
+        <%= o.label :category_id %>
+        <div class="input">
+          <%= o.select :category_id, Category.all.collect{|x| [x.name, x.id]} %>
+        </div>
+      </div>
+      <div class="field clearfix">
+        <%= o.label :description %>
+        <div class="input">
+          <%= o.text_area :description, :rows => 5, :class => 'span5' %>
+        </div>
       </div>
     </div>
-    <div class="clearfix">
-      <%= o.label :pickup_point %>
-      <div class="input">
-        <%= o.text_field :pickup_point, :class => 'span5' %>
-      </div>
+    <div class="actions">
+      <%= o.submit 'Send', :class => 'btn primary' %>
     </div>
-    <div class="field clearfix">
-      <%= o.label :description %>
-      <div class="input">
-        <%= o.text_area :description, :rows => 5, :class => 'span5' %>
-      </div>
-    </div>
-  </div>
-  <div class="actions">
-    <%= o.submit 'Send', :class => 'btn primary' %>
-  </div>
   
+  <% end %>
+<% else %>
+  <%= link_to "Sign in", sign_in_url, :class => 'sign-in-button' %>
 <% end %>

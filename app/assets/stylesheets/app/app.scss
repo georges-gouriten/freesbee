@@ -18,3 +18,57 @@ body{
 }
 
 .square-thumb{ width: 200px; height: 200px;}
+
+
+.give {
+  display:block;
+  position: absolute;
+  color: black;
+  top: 0;
+  right: 60px;
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  z-index: 2147483647;
+}
+
+.give p {
+  text-align: center;
+  margin-top: 43px;
+}
+
+.container {
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 0;
+  overflow: hidden;
+}
+
+#wrapper {
+  margin-top: 50px;
+}
+
+
+footer{
+  position: fixed;
+  background: white;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+}
+
+#refine-search{
+  padding: 1em;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+  .location-filter{
+
+  }
+  .categories-filter{
+
+  }
+}
+
+#available-freesbees{
+
+}
