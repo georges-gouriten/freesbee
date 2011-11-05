@@ -20,6 +20,10 @@ body{
     background: transparent image_url('FREESBEE.png') no-repeat 0 0;
     text-indent: -9999px;
     outline: none;
+    
+    &:hover {
+      background-position: 0 -118px;
+    }
   }
 }
 
