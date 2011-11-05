@@ -1,3 +1,19 @@
-<%= form_for @offer do |o| %>
+<%= form_for @offer, :html => { :multipart => true } do |o| %>
+
+  <div class="field">
+    <%= o.label :name %>
+    <%= o.text_field :name %>
+  </div>
   
+  <div class="field">
+    <%= o.label :description %>
+    <%= o.text_field :description %>
+  </div>
+  
+  <div class="field file">
+    <%= o.label :photo %>
+    <%= o.file_field :photo %>
+  </div>
+  
+  <%= o.submit 'Send' %>
 <% end %>
