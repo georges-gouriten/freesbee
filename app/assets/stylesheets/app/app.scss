@@ -1,4 +1,4 @@
-$bgcolor: #151515;
+$bgcolor: #ffffff;
 
 html, body{
   background-color: $bgcolor;
@@ -8,6 +8,24 @@ body{
   color: #eee;
 }
 
+.topbar {
+  .fill {
+    background: $bgcolor;
+  }
+  
+  .title {
+    display: block;
+    width: 198px;
+    height: 51px;
+    background: transparent image_url('FREESBEE.png') no-repeat 0 0;
+    text-indent: -9999px;
+    outline: none;
+    
+    &:hover {
+      background-position: 0 -118px;
+    }
+  }
+}
 
 #wrapper{
   padding-top: 60px;

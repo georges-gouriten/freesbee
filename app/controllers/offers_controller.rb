@@ -5,7 +5,8 @@ class OffersController < ApplicationController
     if params[:location].present?
       conditions = ''
       if params[:category_ids]
-      @location = @offers.where(:params[:location]
+      @location = @offers.geo_scope(:distance => 5 , :origin => :params[:location])
+    end
     end
     
     if params[:category_ids].present?

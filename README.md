@@ -2,8 +2,12 @@
 
 Give and receive, the principle of reciprocity :)
 
+## Development
 
-## Instructions
+To run the server:
+
+    bundle exec rails s -p 4000
+
 * You will need imagemagick to resize uploaded images.
 * You also need to create `config/initializers/omniauth.rb` with the following content (with real id and secret): 
 
