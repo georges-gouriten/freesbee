@@ -1,0 +1,20 @@
+$bgcolor: #151515;
+
+html, body{
+  background-color: $bgcolor;
+}
+
+body{
+  color: #eee;
+}
+
+
+#wrapper{
+  padding-top: 60px;
+}
+.content {
+  padding: 20px;
+  margin: 30px -20px; /* negative indent the amount of the padding to maintain the grid system */
+}
+
+.square-thumb{ width: 200px; height: 200px;}

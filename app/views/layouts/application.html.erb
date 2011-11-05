@@ -24,15 +24,10 @@
   </head>
 
   <body>
-
     <%= render :partial => "layouts/header" %>
-
-    <div class="container">
-
-      <div class="content">
-        <%= yield %>
-      </div>
-      <%= render :partial => "layouts/footer" %>
+    <div id="wrapper">
+      <%= yield %>
     </div>
+    <%= render :partial => "layouts/footer" %>
   </body>
 </html>
