@@ -18,6 +18,7 @@ body{
 }
 
 .topbar {
+  top: -1px;
   .fill {
     position: relative;
     background: $top_bar_bgcolor;
@@ -141,22 +142,37 @@ footer {
       &.fashion {
         background: transparent image_url('fashion-inactive.png') no-repeat 0 0;
         width: 215px;
+        &.active {
+          background: transparent image_url('fashion-active.png') no-repeat 0 0;
+        }
       }
       &.leisure {
         background: transparent image_url('leisure-inactive.png') no-repeat 0 0;
         width: 122px;
+        &.active {
+          background: transparent image_url('leisure-active.png') no-repeat 0 0;
+        }
       }
       &.electronics {
         background: transparent image_url('electronics-inactive.png') no-repeat 0 0;
         width: 122px;
+        &.active {
+          background: transparent image_url('electronics-active.png') no-repeat 0 0;
+        }
       }
       &.houseware {
         background: transparent image_url('houseware-inactive.png') no-repeat 0 0;
         width: 180px;
+        &.active {
+          background: transparent image_url('houseware-active.png') no-repeat 0 0;
+        }
       }
       &.misc {
         background: transparent image_url('misc-inactive.png') no-repeat 0 0;
         width: 128px;
+        &.active {
+          background: transparent image_url('misc-active.png') no-repeat 0 0;
+        }
       }
     }
   } // .categories-filter
