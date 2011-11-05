@@ -11,12 +11,14 @@ end
 
 module Coldcut
   class Application < Rails::Application
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
+    # config.autoload_paths += %W(#{config.root}/facebook.rb)
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
@@ -44,5 +46,8 @@ module Coldcut
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    FB_APP_CONFIG = YAML.load_file("#{Rails.root}/config/facebook_authentication.yml")
+    
   end
 end

@@ -8,6 +8,7 @@ gem 'rails', '3.1.1'
 gem 'mysql2'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'mini_fb'
 
 # Gems used only for assets and not required
 # in production environments by default.
