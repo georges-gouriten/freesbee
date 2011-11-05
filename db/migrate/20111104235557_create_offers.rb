@@ -5,6 +5,7 @@ class CreateOffers < ActiveRecord::Migration
       t.string :description
       t.string :photo
       t.string :pickup_point
+      t.references :user
       t.timestamps
     end
   end
