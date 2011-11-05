@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
     
     @oauth_url = MiniFB.oauth_url(Coldcut::Application::FB_APP_CONFIG["FACEBOOK_APP_ID"],
                                 facebook_redirect_url, # redirect url
-                                :scope=>MiniFB.scopes.join(","))
+                                :scope => Coldcut::Application::FB_APP_CONFIG["FACEBOOK_APP_SCOPE"])
   end
 end
