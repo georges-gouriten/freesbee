@@ -9,14 +9,24 @@ class SessionsController < ApplicationController
   end
 
   def new
-    redirect_to facebook_url
+    redirect_to "/auth/facebook"
   end
 
   def destroy
     session[:user_id] = nil
     redirect_to root_url, :notice => 'Signed out!'
   end
+  
   def failure
     redirect_to root_url, :alert => "Authentication error: #{params[:message].humanize}"
+  end
+  
+  def facebook
+    redirect_to MiniFB.oauth_url(Coldcut::Application::FB_APP_CONFIG["FACEBOOK_APP_ID"],
+                              'http://localhost:4000/auth/facebook/callback', # redirect url
+                              # facebook_callback_url,
+                              # url_for({:controller => :sessions, :action => :create}),
+                              # auth_facebook_callback_url,
+                              :scope => Coldcut::Application::FB_APP_CONFIG["FACEBOOK_APP_SCOPE"])
   end
 end
