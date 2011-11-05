@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Category.create(:name => 'Accessories')
-Category.create(:name => 'Clothes')
+Category.create(:name => 'Fashion')
+Category.create(:name => 'Leisure')
 Category.create(:name => 'Electronics')
-Category.create(:name => 'Furniture')
-Category.create(:name => 'Miscelaneous')
+Category.create(:name => 'Houseware')
+Category.create(:name => 'Misc')
