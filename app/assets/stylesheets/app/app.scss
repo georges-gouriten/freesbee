@@ -1,4 +1,7 @@
+$top_bar_bgcolor: #000000;
 $bgcolor: #ffffff;
+
+$top_bar_height: 150px;
 
 html, body{
   background-color: $bgcolor;
@@ -10,83 +13,79 @@ body{
 
 .topbar {
   .fill {
-    background: $bgcolor;
-  }
-  
-  .title {
+    position: relative;
+    background: $top_bar_bgcolor;
+    height: $top_bar_height;
     display: block;
-    width: 198px;
-    height: 51px;
-    background: transparent image_url('FREESBEE.png') no-repeat 0 0;
-    text-indent: -9999px;
-    outline: none;
     
-    &:hover {
-      background-position: 0 -118px;
+    .title-container {
+      .title {
+        display: block;
+        width: 350px;
+        height: 134px;
+        background: transparent image_url('freesbee.jpg') no-repeat 0 0;
+        text-indent: -9999px;
+        outline: none;
+      } // .title
+    } // .title-container
+
+    .tagline {
+      display: block;
+      text-indent: -9999px;
+      outline: none;
     }
+
+    .give a {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      height: $top_bar_height;      
+      width: 278px;
+      
+      text-indent: -9999px;
+      outline: none;
+      background: transparent image_url('give.jpg') no-repeat 0 0;
+    } // .give
   }
-}
-
-#wrapper{
-  padding-top: 60px;
-}
-.content {
-  padding: 20px;
-  margin: 30px -20px; /* negative indent the amount of the padding to maintain the grid system */
-}
-
-.square-thumb{ width: 200px; height: 200px;}
-
-
-.give {
-  display:block;
-  position: absolute;
-  color: black;
-  top: 0;
-  right: 60px;
-  width: 200px;
-  height: 100px;
-  background-color: red;
-  z-index: 2147483647;
-}
-
-.give p {
-  text-align: center;
-  margin-top: 43px;
-}
-
-.container {
-  width: 100%;
-  margin-left: 10px;
-  margin-right: 0;
-  overflow: hidden;
-}
+} // .topbar
 
 #wrapper {
-  margin-top: 50px;
-}
+  padding-top: 60px;
+  
+  .container {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 0;
+    overflow: hidden;
+    
+    .content {
+      padding: 20px;
+      margin: 30px -20px; /* negative indent the amount of the padding to maintain the grid system */
 
+      .square-thumb{ width: 200px; height: 200px;}
+    } // .content
+    
+    #refine-search{
+      padding: 1em;
+      background: #fafafa;
+      border-bottom: 1px solid #ddd;
+      .location-filter{
 
-footer{
+      }
+      .categories-filter{
+
+      }
+    } // #refine-search
+    
+  } // .container
+  
+} // #wrapper
+
+footer {
   position: fixed;
   background: white;
   bottom: 0;
   width: 100%;
   padding: 0;
-}
-
-#refine-search{
-  padding: 1em;
-  background: #fafafa;
-  border-bottom: 1px solid #ddd;
-  .location-filter{
-
-  }
-  .categories-filter{
-
-  }
-}
-
-#available-freesbees{
-
-}
+} // footer
