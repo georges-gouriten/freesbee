@@ -3,7 +3,21 @@
     <div class="container">
       <%= link_to 'Give', "#new_offer_form", :class => 'brand', 'data-controls-modal' => 'new_offer_form', 'data-backdrop' => 'static'%>
       <%= link_to 'Offers', offers_path, :class => 'brand' %>
-      <a href="<%= @oauth_url %>">Sign up to facebook</a>
+      
+      <ul>
+        <% if user_signed_in? %>
+          <li>
+          Logged in as <%= current_user.name %>
+          </li>
+          <li>
+          <%= link_to('Sign out', signout_path) %>        
+          </li>
+        <% else %>
+          <li>
+          <%= link_to('Sign in', signin_path)  %>  
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>

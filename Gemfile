@@ -10,7 +10,7 @@ gem 'thin'
 gem 'mysql2'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'mini_fb'
+gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git' , :tag => 'v0.3.0.rc3'
 
 # Gems used only for assets and not required
 # in production environments by default.

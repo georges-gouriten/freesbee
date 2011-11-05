@@ -46,8 +46,5 @@ module Coldcut
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-    
-    FB_APP_CONFIG = YAML.load_file("#{Rails.root}/config/facebook_authentication.yml")
-    
   end
 end
