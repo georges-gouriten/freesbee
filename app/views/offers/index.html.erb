@@ -7,7 +7,7 @@
     <%= render :partial => "modal_form" %>
   </div>
 
-  <% if @offers.any? %>
+  <% if @offers.length > 0 %>
     <% @offers.each do |offer| %>
       <p><%= link_to image_tag(offer.photo.thumb.url, :class => 'square-thumb'), offer %></p>
     <% end %>
