@@ -20,11 +20,10 @@ ActiveRecord::Schema.define(:version => 20111105001741) do
   end
 
   create_table "offers", :force => true do |t|
-    t.string   "name"
+    t.string   "title"
     t.string   "description"
     t.string   "photo"
     t.string   "pickup_point"
-    t.boolean  "is_functional"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
