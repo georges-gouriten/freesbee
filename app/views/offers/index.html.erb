@@ -1,6 +1,10 @@
 <% if @offers.any? %>
-<%= @offers.each do |offer| %>
-  <p><%= offer.title %></p>
+<% @offers.each do |offer| %>
+  <p><%= link_to offer.title, offer %></p>
 <% end %>
 
 <% end %>
+
+<div id="new_offer_form" class="modal fade">
+  <%= render :partial => "form" %>
+</div>

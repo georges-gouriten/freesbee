@@ -7,3 +7,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$('#new_offer_form').modal();

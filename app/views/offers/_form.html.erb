@@ -1,19 +1,29 @@
 <%= form_for @offer, :html => { :multipart => true } do |o| %>
-
-  <div class="field">
+<!-- Stuff here is ordered by order of importance. Title and Photo most important ;-) -->
+  <div class="field clearfix">
     <%= o.label :title %>
-    <%= o.text_field :title %>
+    <div class="input">
+      <%= o.text_field :title, :class => 'span5' %>
+    </div>
+    
   </div>
-  
-  <div class="field">
-    <%= o.label :description %>
-    <%= o.text_field :description %>
-  </div>
-  
-  <div class="field file">
+  <div class="field clearfix file">
     <%= o.label :photo %>
-    <%= o.file_field :photo %>
+    <div class="input">
+      <%= o.file_field :photo %>
+    </div>
+    
   </div>
   
-  <%= o.submit 'Send' %>
+  <div class="field clearfix">
+    <%= o.label :description %>
+    <div class="input">
+      <%= o.text_area :description, :rows => 5, :class => 'span5' %>
+    </div>
+    
+  </div>
+  <div class="clearfix submit">
+    <%= o.submit 'Send' %>
+  </div>
+  
 <% end %>
