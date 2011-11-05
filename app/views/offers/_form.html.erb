@@ -1,4 +1,7 @@
 <%= form_for @offer, :html => { :multipart => true } do |o| %>
+<% if @offer.errors.any? %>
+  <%= @offer.errors.to_s %>
+<% end %>
 <!-- Stuff here is ordered by order of importance. Title and Photo most important ;-) -->
   <div class="field clearfix">
     <%= o.label :title %>
