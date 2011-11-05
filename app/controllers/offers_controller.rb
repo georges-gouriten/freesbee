@@ -3,14 +3,11 @@ class OffersController < ApplicationController
   def index
     @offers = Offer.where('')
     if params[:location].present?
-      conditions = ''
-      if params[:category_ids]
-      @location = @offers.geo_scope(:distance => 5 , :origin => :params[:location])
-    end
+      @offers = Offer.geo_scope(:origin => params[:location]).having('distance <= 5')
     end
     
     if params[:category_ids].present?
-      @offers = Offer.where(:category_id => params[:category_ids])
+      @offers = @offers.where(:category_id => params[:category_ids])
     end
     @offers ||= Offer.all
     @offer = Offer.new

@@ -8,11 +8,10 @@
   </div>
 
 
-  <% if @offers.any? %>
+
     <% @offers.each do |offer| %>
       <p><%= link_to image_tag(offer.photo.thumb.url, :class => 'square-thumb'), offer %></p>
     <% end %>
 
-  <% end %>
-  <%= @location %>
+
 </div>
