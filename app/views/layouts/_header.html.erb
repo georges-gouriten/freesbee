@@ -1,14 +1,12 @@
 <div class="topbar">
   <div class="fill">
-    <div class="container">
-      <form action="">
-        <a class="brand" href="#">Freesbees</a>
-        <h3 style="display: inline">The market place for free stuff</h3>
-      </form>
+    <div class="title-container">
+      <a class="title" href="#">Freesbees</a>
+      <p class="tagline">The market place for free stuff</p>
+    </div>
+    
+    <div class="give">
+      <%= link_to 'Give', "#new_offer_form", :class => 'brand', 'data-controls-modal' => 'new_offer_form', 'data-backdrop' => 'static'%>
     </div>
   </div>
-</div>
-
-<div class="give">
-  <%= link_to 'Give', "#new_offer_form", :class => 'brand', 'data-controls-modal' => 'new_offer_form', 'data-backdrop' => 'static'%>
 </div>
