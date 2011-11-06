@@ -8,4 +8,14 @@
 //= require jquery_ujs
 //= require_tree .
 
-$('#new_offer_form').modal();
+$(document).ready(function() {
+  
+  $('#new_offer_form').modal();
+
+  $(".categories-filter li").click(function() {
+    $(this).toggleClass("active");
+    
+    // TODO: Filter results...
+  })
+
+});

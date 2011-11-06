@@ -1,7 +1,7 @@
 $top_bar_bgcolor: #000000;
 $bgcolor: #ffffff;
 
-$top_bar_height: 150px;
+$top_bar_height: 130px;
 
 @mixin hide_text {
   text-indent: -9999px;
@@ -18,6 +18,7 @@ body{
 }
 
 .topbar {
+  top: -1px;
   .fill {
     position: relative;
     background: $top_bar_bgcolor;
@@ -26,9 +27,9 @@ body{
     
     .title-container {
       .title {
-        width: 350px;
-        height: 134px;
-        background: transparent image_url('freesbee.jpg') no-repeat 0 0;
+        width: 692px;
+        height: 127px;
+        background: transparent image_url('freesbee.png') no-repeat 0 0;
         
         @include hide_text;
       } // .title
@@ -46,7 +47,7 @@ body{
       width: 278px;
       
       @include hide_text;
-      background: transparent image_url('give.jpg') no-repeat 0 -1px;
+      background: transparent image_url('give.png') no-repeat 0 -1px;
     } // .give
   }
 } // .topbar
@@ -141,22 +142,37 @@ footer {
       &.fashion {
         background: transparent image_url('fashion-inactive.png') no-repeat 0 0;
         width: 215px;
+        &.active {
+          background: transparent image_url('fashion-active.png') no-repeat 0 0;
+        }
       }
       &.leisure {
         background: transparent image_url('leisure-inactive.png') no-repeat 0 0;
         width: 122px;
+        &.active {
+          background: transparent image_url('leisure-active.png') no-repeat 0 0;
+        }
       }
       &.electronics {
         background: transparent image_url('electronics-inactive.png') no-repeat 0 0;
         width: 122px;
+        &.active {
+          background: transparent image_url('electronics-active.png') no-repeat 0 0;
+        }
       }
       &.houseware {
         background: transparent image_url('houseware-inactive.png') no-repeat 0 0;
         width: 180px;
+        &.active {
+          background: transparent image_url('houseware-active.png') no-repeat 0 0;
+        }
       }
       &.misc {
         background: transparent image_url('misc-inactive.png') no-repeat 0 0;
         width: 128px;
+        &.active {
+          background: transparent image_url('misc-active.png') no-repeat 0 0;
+        }
       }
     }
   } // .categories-filter
