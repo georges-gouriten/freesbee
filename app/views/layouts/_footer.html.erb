@@ -3,14 +3,14 @@
 <div id="session-info" class="clearfix">
   <ul>
     <% if user_signed_in? %>
-      <li>
+      <li class="logged-in-as">
         Logged in as <%= link_to current_user.name, current_user %>
       </li>
-      <li>
+      <li class="sign-out">
         <%= link_to('Sign out', signout_path, :class => 'sign-out-button') %>
       </li>
     <% else %>
-      <li>
+      <li class="sign-in">
         <%= link_to('Sign in', signin_path, :class => 'sign-in-button' )%>
       </li>
     <% end %>

@@ -8,6 +8,7 @@ $blue: #0095CD;
 $red: #ed1c24;
 $black: #000000;
 $grey: #999999;
+$white: #ffffff;
 
 $top_bar_height: 130px;
 
@@ -15,6 +16,12 @@ $top_bar_height: 130px;
   text-indent: -9999px;
   outline: none;
   display: block;
+}
+
+@mixin border_radius($size) {
+  -webkit-border-radius: $size;
+  -moz-border-radius: $size;
+  border-radius: $size;
 }
 
 html, body{
@@ -177,7 +184,7 @@ footer {
   .categories-filter {
     position: absolute;
     right: 0;
-    bottom: 25px;
+    bottom: 45px;
     
     li {
       float: left;
@@ -232,6 +239,9 @@ footer {
   #session-info {
     background-color: black;
     clear: both;
+    position: relative;
+    padding: 20px;
+    min-height: 15px;
     
     ul {
       list-style: none;
@@ -246,5 +256,41 @@ footer {
       
       @include hide_text;
     } // .sign-in-button
+    
+    .sign_out {
+      
+    }
+    
+    .logged-in-as {
+      float: right;
+      margin-right: 80px;
+      color: $grey;
+      
+      a {
+        color: $white;
+      }
+    }
+    
+    .sign-out-button {
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      
+      display: block;
+      color: $white;
+      background: $black;
+      border: 3px solid $white;
+      
+      font-weight: bold;
+      padding: 5px 10px;
+      
+      @include border_radius(15px);
+      
+      &:hover {
+        text-decoration: none;
+        background: $white;
+        color: $black;
+      }
+    } // .sign-out-button
   }
 } // footer
