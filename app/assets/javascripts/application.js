@@ -12,8 +12,6 @@ $(document).ready(function() {
   
   $('#new_offer_form').modal();
 
-  // Select all to start
-  
   $(".categories-filter li").click(function() {
     var category_class = $(this).attr("class").match(/(category-\w+)/)[1];
 
@@ -23,7 +21,12 @@ $(document).ready(function() {
       activateCategory(category_class);
     }
   })
-
+  // Select all to start
+  $(".categories-filter li").each(function() {
+    var category_class = $(this).attr("class").match(/(category-\w+)/)[1];
+    
+    activateCategory(category_class);
+  });
 });
 
 function deactivateCategory(category_class) {
