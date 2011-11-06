@@ -23,7 +23,18 @@
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   </head>
 
-  <body class="<%= user_signed_in? ? 'signed-in' : 'not-signed-in' %>">
+  <% body_class = [user_signed_in? ? 'signed-in' : 'not-signed-in'] %>
+  <% 
+    if (controller.class.name == "OffersController")
+      if (action_name == "show")
+        body_class << "offer-show-page"
+      elsif (action_name == "index")
+        body_class << "offers-listing-page"
+      end
+    else
+      "page"
+    end %>
+  <body class="<%= body_class.join(" ")%>">
     <%= render :partial => "layouts/header" %>
     <div id="wrapper">
       <%= yield %>
