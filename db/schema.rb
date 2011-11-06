@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111105213949) do
+ActiveRecord::Schema.define(:version => 20111106004138) do
 
   create_table "bids", :force => true do |t|
     t.integer  "user_id"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(:version => 20111105213949) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "message"
+    t.integer  "status",            :default => 0
+    t.string   "facebook_post_url"
   end
 
   create_table "categories", :force => true do |t|
