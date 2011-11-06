@@ -33,12 +33,24 @@ function deactivateCategory(category_class) {
   $(".categories-filter li." + category_class).removeClass("active");
   var link_target = $(".offers-listing .col a img." + category_class).parent();
   $(link_target).removeClass("active");
-  $(link_target).hide(500);
+  $(link_target).hide(500, function() {
+    // Hide columns if they are empty
+    $(".offers-listing .col").each(function() {
+      if ($(this).find("a:visible").length <= 0) {
+        $(this).hide(500);
+      }
+    });
+  });
 }
 
 function activateCategory(category_class) {
   $(".categories-filter li." + category_class).addClass("active");
   var link_target = $(".offers-listing .col a img." + category_class).parent();
   $(link_target).addClass("active");
+  
+  var parent_col = $(link_target).parents().find(".col");
+  if ($(parent_col).is(":hidden")) {
+    $(parent_col).show(300);
+  }
   $(link_target).show(500);
 }
