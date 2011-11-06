@@ -231,7 +231,48 @@ body{
 .offer-show-page {
   #wrapper {
     padding-top: 150px;
-  }
+    
+    .content {
+      padding: 0 20px 20px;
+      
+      .offer-image {
+        border: 5px solid gray;
+      }
+      
+      .published-date {
+        .label {
+          font-size: 23px;
+          line-height: 25px;
+          color: $green;
+          display: block;
+        }
+        
+        .date {
+          clear: left;
+        }
+        
+      } // .published-date
+      
+      .num-bids {
+        
+      }
+      
+      .bid-button {
+        background: transparent image_url("bid.png") no-repeat 0 0;
+        height: 50px;
+        width: 112px;
+        display: block;
+        @include hide_text;
+        
+        &:hover {
+          background: transparent image_url("bid-active.png") no-repeat 0 0;
+        }
+      }
+      
+      
+      
+    } // .content
+  } // #wrapper
 }
 
 footer {

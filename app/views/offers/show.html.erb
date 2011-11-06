@@ -1,1 +1,17 @@
-<%= image_tag @offer.photo.wide_thumb %>
+<div class="content">
+  <h2><%= @offer.title %></h2>
+  <%= image_tag @offer.photo.wide_thumb, :class => "offer-image" %>
+  <div class="description">
+    <%= @offer.description %>
+  </div>
+  
+  <div class="published-date">
+    <span class="label">Published:</span>
+    <span class="date"><%= @offer.updated_at %></span>
+  </div>
+
+  <a class="num-bids" href="">number of Bids: 7</a>
+
+  <a class="bid-button" href="">Bid!</a>
+
+</div>
