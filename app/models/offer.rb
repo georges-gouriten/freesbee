@@ -13,6 +13,7 @@ class Offer < ActiveRecord::Base
   
   belongs_to :user
   has_many :bids
+  belongs_to :category
   
   before_create :geocode
   before_update :geocode

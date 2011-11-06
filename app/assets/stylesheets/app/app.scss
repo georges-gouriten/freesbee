@@ -1,6 +1,14 @@
 $top_bar_bgcolor: #000000;
 $bgcolor: #ffffff;
 
+$green: #85C44D;
+
+$orange: #f7941E;
+$blue: #0095CD;
+$red: #ed1c24;
+$black: #000000;
+$grey: #999999;
+
 $top_bar_height: 130px;
 
 @mixin hide_text {
@@ -90,14 +98,36 @@ body{
         float: left;
         height: 450px;
         width: 200px;
-        margin-right: 20px;
+        margin-right: 25px;
         
         a {
-          margin-bottom: 20px;
+          margin-bottom: 25px;
           display: block;
           height: 200px;
           width: 200px;
-          border: 5px solid blue;
+
+          /* Default border colour */
+          img {
+            border: 5px solid $black;
+          }
+          
+          &.active {
+            img.fashion {
+              border: 5px solid $red;
+            }
+            img.leisure {
+              border: 5px solid $orange;
+            }
+            img.electronics {
+              border: 5px solid $orange;
+            }
+            img.houseware {
+              border: 5px solid $grey;
+            }
+            img.misc {
+              border: 5px solid $green;
+            }
+          }
         }
       }
     }

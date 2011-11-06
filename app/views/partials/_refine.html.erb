@@ -7,7 +7,7 @@
   <% end %>
   <ul class="categories-filter pull-right">
     <% Category.all.each do |category| %>
-      <li class="<%= category.name.downcase %>">
+      <li class="<%= category.css_name %>">
         <label for="<%= category.name %>"><%= category.name %></label>
         <%= check_box_tag category.name %>
       </li>

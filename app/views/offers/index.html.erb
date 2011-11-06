@@ -12,9 +12,9 @@
       <% @offers.each_with_index do |offer, index| %>
         <% if index.even? %>
           <div class="col">
-            <%= link_to image_tag(offer.photo.thumb.url, :class => 'square-thumb'), offer %>
+            <%= link_to image_tag(offer.photo.thumb.url, :class => "square-thumb #{offer.category.css_name}"), offer %>
         <% else %>
-            <%= link_to image_tag(offer.photo.thumb.url, :class => 'square-thumb'), offer %>
+            <%= link_to image_tag(offer.photo.thumb.url, :class => "square-thumb #{offer.category.css_name}"), offer %>
           </div><!-- .col -->
         <% end %>
       <% end %>
