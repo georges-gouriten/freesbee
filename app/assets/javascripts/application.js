@@ -31,10 +31,14 @@ $(document).ready(function() {
 
 function deactivateCategory(category_class) {
   $(".categories-filter li." + category_class).removeClass("active");
-  $(".offers-listing .col a img." + category_class).parent().removeClass("active");
+  var link_target = $(".offers-listing .col a img." + category_class).parent();
+  $(link_target).removeClass("active");
+  $(link_target).hide(500);
 }
 
 function activateCategory(category_class) {
   $(".categories-filter li." + category_class).addClass("active");
-  $(".offers-listing .col a img." + category_class).parent().addClass("active");
+  var link_target = $(".offers-listing .col a img." + category_class).parent();
+  $(link_target).addClass("active");
+  $(link_target).show(500);
 }
