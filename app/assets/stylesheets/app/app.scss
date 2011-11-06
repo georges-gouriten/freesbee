@@ -138,19 +138,10 @@ body{
         }
       }
     }
-  }
-  
-} // #wrapper
-
-footer {
-  background: white;
-  bottom: 0;
-  width: 100%;
-  padding: 0;
-  clear: both;
-  position: relative;
+  } // #available-freesbees
   
   #refine-search {
+    clear: left;
     height: 130px;
     
     .location-filter {
@@ -180,7 +171,7 @@ footer {
         width: 350px;
       }
     } // .location-filter
-  }
+  } // #refine-search
   
   .categories-filter {
     margin-bottom: 5px;
@@ -234,6 +225,16 @@ footer {
       }
     }
   } // .categories-filter
+  
+} // #wrapper
+
+footer {
+  background: white;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+  clear: both;
+  position: relative;
   
   #session-info {
     background-color: black;
