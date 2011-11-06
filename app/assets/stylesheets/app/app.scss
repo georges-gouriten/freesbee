@@ -155,6 +155,7 @@ footer {
     
     .location-filter {
       position: relative;
+      margin-top: 15px;
       
       label {
         background: transparent image_url('location.png') no-repeat 0 0;
@@ -182,9 +183,7 @@ footer {
   }
   
   .categories-filter {
-    position: absolute;
-    right: 0;
-    bottom: 45px;
+    margin-bottom: 5px;
     
     li {
       float: left;
@@ -242,6 +241,10 @@ footer {
     position: relative;
     padding: 20px;
     min-height: 15px;
+    
+    .not-signed-in & {
+      
+    }
     
     ul {
       list-style: none;
