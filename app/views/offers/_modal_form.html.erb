@@ -42,5 +42,8 @@
   
   <% end %>
 <% else %>
-  <%= link_to "Sign in", signin_url, :class => 'sign-in-button' %>
+  <div class="modal-sign-in">
+    <p>First, you must sign in:</p>
+    <%= link_to "Sign in", signin_url, :class => 'sign-in-button' %>
+  </div>
 <% end %>

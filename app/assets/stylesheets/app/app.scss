@@ -250,16 +250,6 @@ footer {
       list-style: none;
       margin: 0;
     }
-    
-    .sign-in-button {
-      display: block;
-      width: 273px;
-      height: 63px;
-      background: transparent image_url('fb-connect.png') no-repeat 0 0;
-      
-      @include hide_text;
-    } // .sign-in-button
-    
     .sign_out {
       
     }
@@ -297,3 +287,21 @@ footer {
     } // .sign-out-button
   }
 } // footer
+
+///////////////////////////////////////////////////////////////////////////
+// General partials
+///////////////////////////////////////////////////////////////////////////
+
+.modal-sign-in {
+  color: $black;
+  padding: 20px;
+}
+
+.sign-in-button {
+  display: block;
+  width: 273px;
+  height: 63px;
+  background: transparent image_url('fb-connect.png') no-repeat 0 0;
+  
+  @include hide_text;
+} // .sign-in-button
