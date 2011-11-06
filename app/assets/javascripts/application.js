@@ -27,6 +27,8 @@ $(document).ready(function() {
     
     activateCategory(category_class);
   });
+  // TODO
+  //layoutOffersListing();
 });
 
 function deactivateCategory(category_class) {
@@ -53,4 +55,22 @@ function activateCategory(category_class) {
     $(parent_col).show(300);
   }
   $(link_target).show(500);
+}
+
+function layoutOffersListing() {
+  var colMargin = getMarginVal(".offers-listing .col", "margin-right");
+  var colWidth = $(".offers-listing .col").outerWidth() + colMargin;
+  var numCols = $(".offers-listing .col").length;
+  var sidePadding = getMarginVal("#wrapper #available-freesbees", "margin-right") + 
+                    getMarginVal("#wrapper #available-freesbees", "margin-left");
+  var offersListingWidth = colWidth * numCols + sidePadding;
+  console.log(offersListingWidth);
+  if (offersListingWidth > window.innerWidth) {
+    console.log(window.innerWidth);
+    // if images are > window width, increase size of width
+  }
+}
+
+function getMarginVal(sel, marginName) {
+  return parseInt($(sel).css(marginName).match(/(\d+)\w+/)[1])
 }
