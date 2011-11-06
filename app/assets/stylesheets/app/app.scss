@@ -82,17 +82,39 @@ body{
     
   } // .container
   
+  #available-freesbees {
+    margin: 89px 20px 0 20px;
+    
+    .offers-listing {
+      .col {
+        float: left;
+        height: 450px;
+        width: 200px;
+        margin-right: 20px;
+        
+        a {
+          margin-bottom: 20px;
+          display: block;
+          height: 200px;
+          width: 200px;
+          border: 5px solid blue;
+        }
+      }
+    }
+  }
+  
 } // #wrapper
 
 footer {
-  position: fixed;
   background: white;
   bottom: 0;
   width: 100%;
   padding: 0;
+  clear: both;
+  position: relative;
   
   #refine-search {
-    height: 139px;
+    height: 130px;
     
     .location-filter {
       position: relative;
@@ -125,7 +147,7 @@ footer {
   .categories-filter {
     position: absolute;
     right: 0;
-    bottom: 80px;
+    bottom: 25px;
     
     li {
       float: left;
@@ -183,6 +205,7 @@ footer {
     
     ul {
       list-style: none;
+      margin: 0;
     }
     
     .sign-in-button {
