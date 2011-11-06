@@ -253,9 +253,13 @@ body{
           display: block;
           background: none;
           text-transform: none;
+          padding: 0;
         }
         
         .date {
+          font-size: 18px;
+          line-height: 20px;
+          font-weight: bold;
           clear: left;
           color: $black;
         }

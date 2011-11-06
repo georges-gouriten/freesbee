@@ -10,7 +10,7 @@
   
   <div class="published-date">
     <span class="label">Published:</span>
-    <span class="date"><%= @offer.updated_at %></span>
+    <span class="date"><%= @offer.updated_at.strftime("%d %B %Y") %></span>
   </div>
 
   <a class="num-bids" href=""><span>number of Bids: </span>7</a>
