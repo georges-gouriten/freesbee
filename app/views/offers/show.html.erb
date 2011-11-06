@@ -4,13 +4,16 @@
   <div class="description">
     <%= @offer.description %>
   </div>
+  <div class="category <%= @offer.category.css_name %> active">
+    <%= @offer.category.name %>
+  </div>
   
   <div class="published-date">
     <span class="label">Published:</span>
     <span class="date"><%= @offer.updated_at %></span>
   </div>
 
-  <a class="num-bids" href="">number of Bids: 7</a>
+  <a class="num-bids" href=""><span>number of Bids: </span>7</a>
 
   <a class="bid-button" href="">Bid!</a>
 

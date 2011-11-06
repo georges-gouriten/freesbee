@@ -234,30 +234,39 @@ body{
     
     .content {
       padding: 0 20px 20px;
+      position: relative;
       
       .offer-image {
         border: 5px solid gray;
+        max-width: 600px;
       }
       
       .published-date {
+        position: absolute;
+        top: 150px;
+        left: 650px;
+        
         .label {
           font-size: 23px;
           line-height: 25px;
           color: $green;
           display: block;
+          background: none;
+          text-transform: none;
         }
         
         .date {
           clear: left;
+          color: $black;
         }
         
       } // .published-date
       
-      .num-bids {
-        
-      }
-      
       .bid-button {
+        position: absolute;
+        top: 260px;
+        left: 650px;
+        
         background: transparent image_url("bid.png") no-repeat 0 0;
         height: 50px;
         width: 112px;
@@ -267,8 +276,65 @@ body{
         &:hover {
           background: transparent image_url("bid-active.png") no-repeat 0 0;
         }
+      } // .bid-button
+      
+      .num-bids {
+        position: absolute;
+        top: 35px;
+        left: 650px;
+        
+        background: transparent image_url("bid-count.png") no-repeat 0 0;
+        display: block;
+        width: 242px;
+        height: 50px;
+        
+        font-size: 30px;
+        line-height: 53px;
+        font-weight: bold;
+        
+        text-align: right;
+        
+        padding-right: 20px;
+        
+        color: $black;
+        
+        span {
+          @include hide_text;
+          display: none;
+        }
       }
       
+      .category {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        
+        display: block;
+        height: 100px;
+        
+        @include hide_text;
+        
+        &.category-fashion {
+          background: transparent image_url('fashion-active.png') no-repeat 0 0;
+          width: 215px;
+        }
+        &.category-leisure {
+          background: transparent image_url('leisure-active.png') no-repeat 0 0;
+          width: 122px;
+        }
+        &.category-electronics {
+          background: transparent image_url('electronics-active.png') no-repeat 0 0;
+          width: 122px;
+        }
+        &.category-houseware {
+          background: transparent image_url('houseware-active.png') no-repeat 0 0;
+          width: 180px;
+        }
+        &.category-misc {
+          background: transparent image_url('misc-active.png') no-repeat 0 0;
+          width: 128px;
+        }
+      }
       
       
     } // .content
