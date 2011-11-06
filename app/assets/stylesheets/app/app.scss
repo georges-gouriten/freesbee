@@ -1,7 +1,7 @@
 $top_bar_bgcolor: #000000;
 $bgcolor: #ffffff;
 
-$top_bar_height: 150px;
+$top_bar_height: 130px;
 
 @mixin hide_text {
   text-indent: -9999px;
@@ -27,9 +27,9 @@ body{
     
     .title-container {
       .title {
-        width: 350px;
-        height: 134px;
-        background: transparent image_url('freesbee.jpg') no-repeat 0 0;
+        width: 692px;
+        height: 127px;
+        background: transparent image_url('freesbee.png') no-repeat 0 0;
         
         @include hide_text;
       } // .title
@@ -47,7 +47,7 @@ body{
       width: 278px;
       
       @include hide_text;
-      background: transparent image_url('give.jpg') no-repeat 0 -1px;
+      background: transparent image_url('give.png') no-repeat 0 -1px;
     } // .give
   }
 } // .topbar
