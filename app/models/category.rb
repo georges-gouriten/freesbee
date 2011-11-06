@@ -1,6 +1,6 @@
 class Category < ActiveRecord::Base
   
   def css_name
-    name.downcase
+    "category-#{name.downcase}"
   end
 end

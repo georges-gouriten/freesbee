@@ -112,19 +112,19 @@ body{
           }
           
           &.active {
-            img.fashion {
+            img.category-fashion {
               border: 5px solid $red;
             }
-            img.leisure {
+            img.category-leisure {
               border: 5px solid $orange;
             }
-            img.electronics {
-              border: 5px solid $orange;
-            }
-            img.houseware {
+            img.category-electronics {
               border: 5px solid $grey;
             }
-            img.misc {
+            img.category-houseware {
+              border: 5px solid $blue;
+            }
+            img.category-misc {
               border: 5px solid $green;
             }
           }
@@ -191,35 +191,35 @@ footer {
         display: none;
       }
       
-      &.fashion {
+      &.category-fashion {
         background: transparent image_url('fashion-inactive.png') no-repeat 0 0;
         width: 215px;
         &.active {
           background: transparent image_url('fashion-active.png') no-repeat 0 0;
         }
       }
-      &.leisure {
+      &.category-leisure {
         background: transparent image_url('leisure-inactive.png') no-repeat 0 0;
         width: 122px;
         &.active {
           background: transparent image_url('leisure-active.png') no-repeat 0 0;
         }
       }
-      &.electronics {
+      &.category-electronics {
         background: transparent image_url('electronics-inactive.png') no-repeat 0 0;
         width: 122px;
         &.active {
           background: transparent image_url('electronics-active.png') no-repeat 0 0;
         }
       }
-      &.houseware {
+      &.category-houseware {
         background: transparent image_url('houseware-inactive.png') no-repeat 0 0;
         width: 180px;
         &.active {
           background: transparent image_url('houseware-active.png') no-repeat 0 0;
         }
       }
-      &.misc {
+      &.category-misc {
         background: transparent image_url('misc-inactive.png') no-repeat 0 0;
         width: 128px;
         &.active {
