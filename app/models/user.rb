@@ -2,8 +2,7 @@ class User < ActiveRecord::Base
   
   validates :uid, :presence => true
   validates :name, :presence => true
-  validates :email, :presence => true
-
+  
   def self.create_with_omniauth(auth)
     begin
       create! do |user|
