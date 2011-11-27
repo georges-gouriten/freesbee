@@ -1,4 +1,5 @@
 class OffersController < ApplicationController
+  before_filter :new_offer
   
   def index
     @offers = Offer.where('')
@@ -12,8 +13,8 @@ class OffersController < ApplicationController
     @offers ||= Offer.all
     @offer = Offer.new
   end
+  
   def new
-    @offer = Offer.new
   end
   
   def create
@@ -29,5 +30,11 @@ class OffersController < ApplicationController
   
   def show
     @offer = Offer.find(params[:id])
+  end
+  
+  private
+  
+  def new_offer
+    @new_offer = Offer.new
   end
 end

@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <%= form_for @offer, :html => { :multipart => true } do |o| %>
+  <%= form_for @new_offer, :html => { :multipart => true } do |o| %>
     <%= o.hidden_field :user_id, :value => current_user.id %>
     <!-- Stuff here is ordered by order of importance. Title and Photo most important ;-) -->
     <div class="modal-body">
