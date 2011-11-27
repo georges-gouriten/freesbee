@@ -1,0 +1,24 @@
+base: &base
+  adapter: mysql2
+  username: root
+  password: 
+  host: localhost
+
+development:
+  database: freesbee_development
+  <<: *base
+
+test: &test
+  database: freesbee_test
+  <<: *base
+  
+staging:
+  database: freesbee_staging
+  <<: *base
+
+production:
+  database: freesbee_production
+  <<: *base
+
+cucumber:
+  <<: *test
