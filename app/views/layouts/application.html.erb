@@ -38,6 +38,13 @@
     <%= render :partial => "layouts/header" %>
     <div id="wrapper">
       <%= yield %>
+      <div id="new_offer_form" class="fade modal">
+        <div class="modal-header">
+          <a href="#" class="close">×</a>
+          <h3>What are you giving out?</h3>
+        </div>
+        <%= render :partial => "modal_form" %>
+      </div>
     </div>
     <footer>
       <%= render :partial => "layouts/footer" %>

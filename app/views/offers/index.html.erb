@@ -1,12 +1,4 @@
 <div id="available-freesbees">
-  <div id="new_offer_form" class="fade modal">
-    <div class="modal-header">
-      <a href="#" class="close">×</a>
-      <h3>What are you giving out?</h3>
-    </div>
-    <%= render :partial => "modal_form" %>
-  </div>
-
   <% if @offers.length > 0 %>
     <div class="offers-listing">
       <% @offers.each_with_index do |offer, index| %>
