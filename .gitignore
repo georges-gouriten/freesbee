@@ -3,6 +3,8 @@
 db/*.sqlite3
 log/*.log
 tmp/
+*.swp
+config/omniauth.rb
 .sass-cache/
 config/database.yml
 public/uploads/
