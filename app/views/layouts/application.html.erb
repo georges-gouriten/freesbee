@@ -36,6 +36,14 @@
     end %>
   <body class="<%= body_class.join(" ")%>">
     <%= render :partial => "layouts/header" %>
+		<% if alert %>
+			<div class="alert-message block-message success" data-alert="alert" style="position: fixed; top: 50px; right: 300px; z-index: 15000">
+				<a class="close" href="#">×</a>
+				<p>
+					<%= alert %>
+				</p>
+			</div>
+		<% end %>
     <div id="wrapper">
       <%= yield %>
       <div id="new_offer_form" class="fade modal">

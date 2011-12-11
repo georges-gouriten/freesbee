@@ -1,16 +1,20 @@
 <% if user_signed_in? %>
   <%= form_for @bid do |o| %>
     <%= o.hidden_field :user_id, :value => current_user.id %>
-    <!-- Stuff here is ordered by order of importance. Title and Photo most important ;-) -->
+		<%= o.hidden_field :offer_id, :value => @offer.id %>
+		
     <div class="modal-body">
-      
       <div class="field clearfix">
         <%= o.label :message %>
         <div class="input">
           <%= o.text_field :message, :class => 'span5' %>
         </div>
-        </div>
-  
+			</div>
+		  <div class="actions">
+		    <%= o.submit 'Send', :class => 'btn primary' %>
+		  </div>
+  	</div>
+
   <% end %>
 <% else %>
   <div class="modal-sign-in">
