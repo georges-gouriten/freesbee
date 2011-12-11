@@ -30,6 +30,7 @@ class OffersController < ApplicationController
   
   def show
     @offer = Offer.find(params[:id])
+    @bid = Bid.new
   end
   
   private

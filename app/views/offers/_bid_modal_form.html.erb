@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+  <%= form_for @bid do |o| %>
+    <%= o.hidden_field :user_id, :value => current_user.id %>
+    <!-- Stuff here is ordered by order of importance. Title and Photo most important ;-) -->
+    <div class="modal-body">
+      
+      <div class="field clearfix">
+        <%= o.label :message %>
+        <div class="input">
+          <%= o.text_field :message, :class => 'span5' %>
+        </div>
+  
+  <% end %>
+<% else %>
+  <div class="modal-sign-in">
+    <p>First, you must sign in:</p>
+    <%= link_to "Sign in", signin_url, :class => 'sign-in-button' %>
+  </div>
+<% end %>
