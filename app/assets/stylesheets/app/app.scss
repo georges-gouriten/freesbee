@@ -29,7 +29,7 @@ html, body{
 }
 
 body{
-  color: #eee;
+  color: $black;
 }
 
 .topbar {
@@ -43,7 +43,7 @@ body{
     .title-container {
       .title {
         width: 692px;
-        height: 127px;
+        height: 120px;
         background: transparent image_url('freesbee.png') no-repeat 0 0;
         
         @include hide_text;
@@ -68,8 +68,7 @@ body{
 } // .topbar
 
 #wrapper {
-  padding-top: 60px;
-  
+  padding-top: 130px;
   .container {
     width: 100%;
     margin-left: 10px;
@@ -78,7 +77,7 @@ body{
     
     .content {
       padding: 20px;
-      margin: 30px -20px; /* negative indent the amount of the padding to maintain the grid system */
+      margin: 10px -20px; /* negative indent the amount of the padding to maintain the grid system */
 
       .square-thumb{ width: 200px; height: 200px;}
     } // .content
@@ -98,7 +97,7 @@ body{
   } // .container
   
   #available-freesbees {
-    margin: 89px 20px 0 20px;
+    margin: 20px 20px;
     
     .offers-listing {
       .col {

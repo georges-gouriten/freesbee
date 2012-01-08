@@ -1,0 +1,38 @@
+<div class="content">
+  <h2><%= @user.name %></h2>
+  <%= image_tag @user.profile_photo_url, :class => "user-image" %>
+	<h2>My bids</h2>
+	<table>
+		<tr>
+			<td>Freesbee</td>
+			<td>Date</td>
+			<td>Message</td>
+			<td>Status</td>
+		</tr>	
+			
+		<% @user_bids.each do |user_bid| %>
+			<tr>
+				<td><%= user_bid.offer_id %></td>
+				<td><%= user_bid.created_at %></td>
+				<td><%= user_bid.message %></td>
+				<td><%= user_bid.status %></td>
+		<% end %>
+	</table>
+	<h2>My offers</h2>
+	<table>
+		<tr>
+			<td>Freesbee</td>
+			<td>Date</td>
+			<td>Title</td>
+			<td>Status</td>
+		</tr>	
+			
+		<% @user_offers.each do |user_offer| %>
+			<tr>
+				<td><%= user_offer.id %></td>
+				<td><%= user_offer.created_at %></td>
+				<td><%= user_offer.title %></td>
+				<td>To be added</td>
+		<% end %>
+	</table>
+</div>
