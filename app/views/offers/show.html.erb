@@ -13,7 +13,7 @@
     <span class="date"><%= @offer.updated_at.strftime("%d %B %Y") %></span>
   </div>
 
-  <a class="num-bids" href=""><span>number of Bids: </span><%= @offer.bids.count %></a>
+  <div class="num-bids"><span>number of Bids: </span><%= @offer.bids.count %></a>
   <% if (@offer.user != current_user) %>
     <%= link_to 'Bid', "#new_bid_form", :class =>'bid-button','data-controls-modal' => 'new_bid_form', 'data-backdrop' => 'static'%>
   <% else %>
