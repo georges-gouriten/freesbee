@@ -80,8 +80,9 @@ body{
       margin: 10px -20px; /* negative indent the amount of the padding to maintain the grid system */
 
       .square-thumb{ width: 200px; height: 200px;}
+
     } // .content
-    
+
     #refine-search{
       padding: 1em;
       background: #fafafa;
@@ -339,8 +340,56 @@ body{
         }
       }
       
+    
+
       
     } // .content
+      .offer_detail {
+        clear: left;
+        background: $green;
+
+        .title {
+          background: white;
+          padding: 10px;
+          text-transform: capitalize;
+          font-size: 200%;
+          margin: 5px;
+        }
+
+        table.items {
+          padding: 5px;
+          border-right: 15px solid $green;
+        }
+
+        tr.header_row{
+          font-weight: bold;
+          color: $black;
+        }
+
+        tr.item {
+          color: $grey;
+        }
+
+        tr:hover.item {
+          color: $green;
+        }
+
+        td.usernames {
+          background: $green;
+          border-left: 0px;
+          color: $black;
+          font-size: 150%;
+          text-align: center;
+        }
+
+        td {
+          background: white;
+          border: 0px;
+          border-left: 15px solid $green;
+        }
+
+
+      }
   } // #wrapper
 }
 

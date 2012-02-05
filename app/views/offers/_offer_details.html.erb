@@ -1,0 +1,27 @@
+<div class="offer_detail">
+  <span class="title">
+    Dashboard
+  </span>
+
+  <table class="items">
+    <tr class="header_row">
+      <td class="usernames" width=20%"></td>
+      <td width=40%">comment</td>
+      <td width=15%">posted on</td>
+      <td width=15%">distance</td>
+      <td width=10%">select</td>
+    </tr>
+    <% @offer.bids.each do |bid| %>
+    <tr class="item">
+      <td class="usernames"><%= bid.user.name %></td>
+      <td><%= bid.message %></td>
+      <td><%= bid.created_at %></td>
+      <td>distance</td>
+      <td>select</td>
+    </tr>
+    <% end %>
+
+  </table>
+  <br><br>
+
+</div>
